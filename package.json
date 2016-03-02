@@ -1,0 +1,20 @@
+{
+  "name": "preludejs",
+  "version": "1.0.0",
+  "description": "javascript implementation of haskell prelude",
+  "main": "preludejs.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "prelude",
+    "javascript",
+    "functional",
+    "haskell"
+  ],
+  "author": "theadedmonkey",
+  "license": "ISC",
+  "dependencies": {
+    "seamless-immutable": "^5.1.0"
+  }
+}
