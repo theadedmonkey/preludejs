@@ -1,22 +1,29 @@
-var Immutable = require('seamless-immutable');
+'use strict';
 
+console.log('ok');
+var hello = 1;
+/*
 function add(a, b) {
   return a + b;
 };
-
+*/
+/*
 function head(xs) {
   return xs[0];
 };
-
+*/
+/*
 function tail(xs) {
   return xs.slice(1);
 };
-
+*/
+/*
 function foldr(f, z, xs) {
   return xs.length === 0
     ? z
     : f(head(xs), foldr(f, z, tail(xs)))
 };
+*/
 /*
  * type:        map :: (a -> b) -> [a] -> [b]
  * description: given a function, and a list of any type, returns a list where
@@ -26,28 +33,33 @@ function foldr(f, z, xs) {
  * usage:       Prelude> map sqrt [1..5]
  *              [1.0, 1.41421, 1.73205, 2.0, 2.23607]
  */
+/*
 function map(f, xs) {
-  var xs_p = [];
-
+ var xs_p = [];
   for ( var i = 0; i < xs.length; i++ ) {
-    xs_p.push(f(xs[i]))
-  }
-  return xs_p;
+   xs_p.push(f(xs[i]))
+ }
+ return xs_p;
 }
+*/
 
 /*
  * && operator as function
  */
+/*
 function __and(a, b) {
   return a && b;
 }
+*/
 
 /*
  * || operator as function
  */
+/*
 function __or(a, b) {
   return a || b;
 }
+*/
 
 /*
  * type:        and :: [Bool] -> Bool
@@ -61,9 +73,11 @@ function __or(a, b) {
  *              Prelude> and []
  *              True
  */
+/*
 function and(xs) {
   return foldr(__and, true, xs);
 }
+*/
 /*
  * type:        or :: [Bool] -> Bool
  * description: applied to a list of boolean values, returns their logical
@@ -76,9 +90,11 @@ function and(xs) {
  *              Prelude> or []
  *              False
  */
+/*
 function or(xs) {
   return foldr(__or, false, xs);
 }
+*/
 
 /*
  * type:        all :: (a -> Bool) -> [a] -> Bool
@@ -91,9 +107,11 @@ function or(xs) {
  *              Prelude> all isDigit "123abc"
  *              False
  */
+/*
 function all(p, xs) {
   return and(map(p, xs));
 }
+*/
 
 /*
  * type:        any :: (a -> Bool) -> [a] -> Bool
@@ -108,9 +126,11 @@ function all(p, xs) {
  *              Prelude> any isDigit "alphabetics"
  *              False
  */
+/*
 function any(p, xs) {
   return or(map(p, xs));
 }
+*/
 
 /*
 var words = Immutable(["con", "cat", "en", "ate"]);
